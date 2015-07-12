@@ -41,7 +41,25 @@ class BinHeap(object):
         self.heapList.pop()
         self.percDown(1)
         return retval
-    
+   
+    def delMax(self):
+        retval = None
+        rLast = self.heapList[self.currentSize]
+        rLastMinusOne = self.heapList[self.currentSize - 1]
+        
+        if rLast >= rLastMinusOne:
+            retval = rLast
+        else:
+            retval = rLastMinusOne
+            tmp = self.heapList[self.currentSize]
+            self.heapList[self.currentSize - 1] = tmp
+        
+        self.heapList.pop(self.currentSize)    
+        self.currentSize -= 1
+        return retval
+
+        
+        
     def buildHeap(self,alist):
         i = len(alist) // 2
         self.currentSize = len(alist)

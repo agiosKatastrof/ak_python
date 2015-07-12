@@ -17,3 +17,7 @@ print b.heapList
 b.insert(7)
 
 print b.heapList
+
+print b.delMax()
+
+print b.heapList
