@@ -57,7 +57,6 @@ class BinHeap(object):
         self.heapList.pop(self.currentSize)    
         self.currentSize -= 1
         return retval
-
         
         
     def buildHeap(self,alist):
@@ -67,7 +66,12 @@ class BinHeap(object):
         while (i > 0):
             self.percDown(i)
             i -= 1
-            
+    
+    def returnMin(self):
+        return self.heapList[1]
+    
+    def returnMax(self):
+        return self.heapList[self.currentSize]
             
         
         
