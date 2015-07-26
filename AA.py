@@ -1,13 +1,13 @@
 #!/usr/bin/python
-'''
+
 j = int(raw_input())
 i = raw_input()
-'''
-j = 5
+
+#j = 5
 #i = '1 11 31 41 51'
 #i = '1 3 5 9 11'
 #i = '5 4 3 2 0'
-i = '5 3 2 1 0'
+#i = '5 3 2 1 0'
 
 numbers = i.split(" ")
 
@@ -19,8 +19,8 @@ for i in range(0,j):
     delta = current - prev
     deltas[i] = delta
     
-    print "Current ", current
-    print "Delta ", delta
+  #  print "Current ", current
+ #   print "Delta ", delta
     
 
     if i > 1:
@@ -31,9 +31,9 @@ for i in range(0,j):
             print prev - delta
             break
         
-    print
+   # print
         
-print deltas
+#print deltas
 
     
     
