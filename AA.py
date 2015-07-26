@@ -4,8 +4,10 @@ j = int(raw_input())
 i = raw_input()
 '''
 j = 5
+#i = '1 11 31 41 51'
 #i = '1 3 5 9 11'
-i = '1 5 7 9 11'
+#i = '5 4 3 2 0'
+i = '5 3 2 1 0'
 
 numbers = i.split(" ")
 
@@ -20,14 +22,14 @@ for i in range(0,j):
     print "Current ", current
     print "Delta ", delta
     
-    if delta > 0 and deltas[i-1] > 0:
-        if delta > deltas[i-1]:
+
+    if i > 1:
+        if abs(delta) > abs(deltas[i-1]):
             print current - deltas[i-1]
             break
-        elif delta < deltas[i-1]:
+        if abs(delta) < abs(deltas[i-1]):
             print prev - delta
             break
-        pass
         
     print
         
